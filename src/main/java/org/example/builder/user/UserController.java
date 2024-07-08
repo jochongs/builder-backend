@@ -1,6 +1,7 @@
 package org.example.builder.user;
 
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 import org.example.builder.user.dto.SignUpDTO;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -8,13 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
+@AllArgsConstructor
 public class UserController {
+
+    private final UserService userService;
 
     @PostMapping()
     public void signUp(
             @Valid @RequestBody SignUpDTO signUpDTO
     ) {
-        return;
+        userService.signUp(signUpDTO);
     }
 }
