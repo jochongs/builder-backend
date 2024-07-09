@@ -1,4 +1,4 @@
-package org.example.builder.user.dto;
+package org.example.builder.domain.user.dto;
 
 import jakarta.validation.constraints.*;
 import lombok.Getter;

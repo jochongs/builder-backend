@@ -1,14 +1,12 @@
-package org.example.builder.user.model;
+package org.example.builder.domain.user.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
-import org.example.builder.auth.model.Account;
 import org.springframework.data.annotation.CreatedDate;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity(name = "user_tb")

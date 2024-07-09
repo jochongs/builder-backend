@@ -14,6 +14,7 @@ public class MailerService {
     public void send(String toEmail, String title, String content) {
         SimpleMailMessage message = new SimpleMailMessage();
 
+        message.setFrom("shoot151511@gmail.com");
         message.setTo(toEmail);
         message.setSubject("인증코드입니다.");
         message.setText("123123");

@@ -1,11 +1,11 @@
-package org.example.builder.user;
+package org.example.builder.domain.user;
 
 import lombok.AllArgsConstructor;
-import org.example.builder.auth.AccountRepository;
-import org.example.builder.auth.model.Account;
-import org.example.builder.email.MailerService;
-import org.example.builder.user.dto.SignUpDTO;
-import org.example.builder.user.model.User;
+import org.example.builder.domain.auth.AccountRepository;
+import org.example.builder.domain.auth.model.Account;
+import org.example.builder.domain.user.model.User;
+import org.example.builder.common.email.MailerService;
+import org.example.builder.domain.user.dto.SignUpDTO;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

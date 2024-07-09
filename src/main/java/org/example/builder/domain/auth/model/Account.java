@@ -1,12 +1,9 @@
-package org.example.builder.auth.model;
+package org.example.builder.domain.auth.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
-import org.example.builder.user.model.User;
-import org.example.builder.user.model.UserIdx;
-
-import java.io.Serializable;
+import org.example.builder.domain.user.model.User;
 
 @Getter
 @Setter
