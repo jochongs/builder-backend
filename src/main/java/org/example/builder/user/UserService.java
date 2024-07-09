@@ -13,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 @AllArgsConstructor
 public class UserService {
 
-    private final UserRepository userRepository;
     private final AccountRepository accountRepository;
 
     @Transactional
@@ -22,8 +21,6 @@ public class UserService {
                 .name(signUpDto.getName())
                 .email(signUpDto.getEmail())
                 .build();
-
-        userRepository.save(user);
 
         Account account = Account.builder()
                 .pw(signUpDto.getPw())

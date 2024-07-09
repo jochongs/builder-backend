@@ -8,6 +8,7 @@ import lombok.*;
 import org.example.builder.auth.model.Account;
 import org.springframework.data.annotation.CreatedDate;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity(name = "user_tb")
@@ -20,7 +21,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idx")
-    private Long idx;
+    private Integer idx;
 
     @NotNull
     @Column(name = "name", nullable = false)

@@ -4,25 +4,28 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.example.builder.user.model.User;
+import org.example.builder.user.model.UserIdx;
 
-@Entity(name = "account_tb")
+import java.io.Serializable;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @ToString
+@Entity(name = "account_tb")
 public class Account {
 
     @Id
-    @Column(name = "idx")
-    private Long idx;
+    private Integer idx;
+
+    @OneToOne
+    @MapsId
+    @JoinColumn(name = "idx", referencedColumnName = "idx")
+    private User user;
 
     @NotNull
     @Column(name = "pw", nullable = false)
     private String pw;
-
-    @OneToOne
-    @JoinColumn(name = "idx", referencedColumnName = "idx", insertable = false, updatable = false)
-    User user;
 
     @Builder
     public Account(String pw, User user) {
