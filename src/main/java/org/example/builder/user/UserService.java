@@ -5,7 +5,6 @@ import org.example.builder.auth.AccountRepository;
 import org.example.builder.auth.model.Account;
 import org.example.builder.user.dto.SignUpDTO;
 import org.example.builder.user.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
